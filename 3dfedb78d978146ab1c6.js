@@ -1,0 +1,1 @@
+import{initialPageLoad}from"./pageLoad";import{menuPage}from"./menuPage";document.addEventListener("DOMContentLoaded",(()=>{initialPageLoad()})),document.getElementById("home").addEventListener("click",(()=>{initialPageLoad()})),document.getElementById("menu").addEventListener("click",(()=>{menuPage()}));
