@@ -1,0 +1,1 @@
+const tabs=["home","menu","contact"];function hideAllTabs(){document.querySelectorAll(".tabContent").forEach((t=>{t.classList.remove("active")}))}tabs.forEach((t=>{const e=document.getElementById(t),c=document.getElementById(t+"Content");e.addEventListener("click",(()=>{hideAllTabs(),c.classList.add("active")}))}));

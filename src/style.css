@@ -1,0 +1,286 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&display=swap');
+
+body {
+    margin: 0;
+    backdrop-filter: brightness(40%);
+    color: white;
+    background-repeat: no-repeat;
+    background-image: url('./background.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+}
+
+h1#title {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 4rem;
+
+}
+
+#content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Madimi One", sans-serif;
+    font-size: 19px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    height: 80px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    line-height: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+nav>button {
+    position: relative;
+    /* Ensure proper positioning for pseudo-element */
+    margin-right: 5px;
+    background-color: white;
+    height: 60%;
+    width: 5%;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+}
+
+nav>button:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    /* Height of the underline */
+    background-color: rgb(194, 165, 4);
+    /* Color of the underline */
+    transition: width 0.3s ease;
+
+}
+
+nav>button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Initial width of the underline */
+    height: 2px;
+    /* Height of the underline */
+    background-color: rgb(194, 165, 4);
+    /* Color of the underline */
+    transition: width 0.3s ease;
+    /* Smooth transition for the underline */
+
+}
+
+
+nav h1 {
+    margin-right: auto;
+    margin-left: 20px;
+    color: black;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+
+}
+
+#hours b {
+    padding-right: 20px;
+}
+
+#hours span {
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+}
+
+#location,
+#description {
+    font-family: 'Courier New', monospace;
+    line-height: 1.5;
+}
+
+/*MENU PAGE */
+
+
+
+.menuBoard {
+    background-color: rgba(157, 157, 157, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 600px;
+}
+
+.menuBoard {
+    font-family: 'Courier New', monospace;
+    background-color: rgba(157, 157, 157, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.foodItem {
+    font-family: 'Courier New', monospace;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 8px;
+}
+
+.foodItem h2 {
+    margin: 0;
+}
+
+.foodItem p {
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .menuBoard {
+        width: 95%;
+    }
+}
+
+
+#content.animate-fade-in {
+    /* Add fade-in animation properties */
+    animation-name: fadeIn;
+    /* Specify the name of the animation */
+    animation-duration: 0.5s;
+    /* Duration of the animation */
+    animation-timing-function: ease;
+    /* Easing function */
+}
+
+@keyframes fadeIn {
+
+    /* Define the fade-in animation */
+    from {
+        opacity: 0;
+        /* Start state */
+    }
+
+    to {
+        opacity: 1;
+        /* End state */
+    }
+}
+
+
+/*CONTACT US PAGE */
+
+.contactUs {
+    background: rgba(157, 157, 157);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    font-family: 'Courier New', monospace;
+}
+
+
+
+.contactInput {
+    width: 98%;
+    padding: 0.5rem 0;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    background: rgba(157, 157, 157);
+    outline: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    border-bottom: 2px solid black;
+    color: white;
+
+}
+
+
+
+
+.contactInput::placeholder {
+    color: white;
+}
+
+.contactMessage {
+    width: 98%;
+    height: 130px;
+    padding: 1rem 0.5rem;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    background: rgba(157, 157, 157);
+    outline: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    border-bottom: 2px solid black;
+    color: white;
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+
+.contactMessage::placeholder {
+    color: white;
+}
+
+.contactButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.contactButton:hover {
+    background-color: #0056b3;
+}
